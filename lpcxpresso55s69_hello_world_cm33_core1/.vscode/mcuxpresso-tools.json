@@ -1,0 +1,20 @@
+{
+  "version": "24.9",
+  "toolchainPath": "C:/NXP/MCUXpressoIDE_24.12.99_alpha/ide/tools",
+  "linkedProjects": [],
+  "trustZoneType": "none",
+  "multicoreType": "secondary",
+  "debug": {
+    "linkserver": {},
+    "pemicro": {},
+    "segger": {}
+  },
+  "projectType": "sdk-freestanding",
+  "sdk": {
+    "version": "2.16.000",
+    "path": "c:\\repos\\sdk_2_16",
+    "boardId": "lpcxpresso55s69",
+    "deviceId": "LPC55S69",
+    "coreId": "cm33_core1_LPC55S69"
+  }
+}
