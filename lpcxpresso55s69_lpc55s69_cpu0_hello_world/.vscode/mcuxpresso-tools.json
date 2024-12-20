@@ -1,0 +1,19 @@
+{
+  "version": "24.9",
+  "toolchainPath": "",
+  "linkedProjects": [],
+  "trustZoneType": "none",
+  "multicoreType": "none",
+  "debug": {
+    "linkserver": {},
+    "pemicro": {},
+    "segger": {}
+  },
+  "projectType": "zephyr-freestanding",
+  "sdk": {
+    "version": "4.0.0",
+    "path": "c:\\repos\\zephyr_4.0",
+    "boardId": "lpcxpresso55s69/lpc55s69/cpu0",
+    "sysbuild": true
+  }
+}
