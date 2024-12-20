@@ -9,7 +9,7 @@
       "displayName": "debug",
       "generator": "Ninja",
       "binaryDir": "${fileDir}/${presetName}",
-      "toolchainFile": "$env{SdkRootDirPath}/core/tools/cmake_toolchain_files/armgcc.cmake",
+      "toolchainFile": "$env{SdkRootDirPath}/tools/cmake_toolchain_files/armgcc.cmake",
       "inherits": "debug-env",
       "cacheVariables": {
         "lpcxpresso55s69_hello_world_cm33_core1": "c:\\Users\\nxa07297\\vscode\\wksp\\lpcxpresso55s69_hello_world_cm33_core1",
@@ -26,7 +26,7 @@
       "displayName": "release",
       "generator": "Ninja",
       "binaryDir": "${fileDir}/${presetName}",
-      "toolchainFile": "$env{SdkRootDirPath}/core/tools/cmake_toolchain_files/armgcc.cmake",
+      "toolchainFile": "$env{SdkRootDirPath}/tools/cmake_toolchain_files/armgcc.cmake",
       "inherits": "release-env",
       "cacheVariables": {
         "lpcxpresso55s69_hello_world_cm33_core1": "c:\\Users\\nxa07297\\vscode\\wksp\\lpcxpresso55s69_hello_world_cm33_core1",
