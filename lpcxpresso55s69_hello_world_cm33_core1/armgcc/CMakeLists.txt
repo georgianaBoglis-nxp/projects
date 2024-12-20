@@ -26,12 +26,6 @@ SET(CMAKE_EXECUTABLE_LIBRARY_SUFFIX)
 # CURRENT DIRECTORY
 SET(ProjDirPath ${CMAKE_CURRENT_SOURCE_DIR})
 
-if (DEFINED ENV{SdkRootDirPath})
-    SET(SdkRootDirPath "$ENV{SdkRootDirPath}")
-else()
-    SET(SdkRootDirPath "${ProjDirPath}/../../../../../..")
-endif()
-
 SET(EXECUTABLE_OUTPUT_PATH ${ProjDirPath}/${CMAKE_BUILD_TYPE})
 SET(LIBRARY_OUTPUT_PATH ${ProjDirPath}/${CMAKE_BUILD_TYPE})
 
@@ -43,7 +37,7 @@ set(MCUX_BUILD_TYPES debug release)
 set(MCUX_SDK_PROJECT_NAME hello_world_cm33_core1.elf)
 
 if (NOT DEFINED SdkRootDirPath)
-    SET(SdkRootDirPath ${SdkRootDirPath})
+    SET(SdkRootDirPath ${ProjDirPath}/../../../../../..)
 endif()
 
 include(${ProjDirPath}/flags.cmake)
@@ -54,19 +48,18 @@ add_executable(${MCUX_SDK_PROJECT_NAME}
 "${ProjDirPath}/../hello_world_core1.c"
 "${ProjDirPath}/../pin_mux.c"
 "${ProjDirPath}/../pin_mux.h"
-"${SdkRootDirPath}/core/boards/lpcxpresso55s69/board.c"
-"${SdkRootDirPath}/core/boards/lpcxpresso55s69/board.h"
-"${SdkRootDirPath}/core/boards/lpcxpresso55s69/clock_config.c"
-"${SdkRootDirPath}/core/boards/lpcxpresso55s69/clock_config.h"
+"${ProjDirPath}/../board.c"
+"${ProjDirPath}/../board.h"
+"${ProjDirPath}/../clock_config.c"
+"${ProjDirPath}/../clock_config.h"
 )
 
 target_include_directories(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${ProjDirPath}/..
-    ${SdkRootDirPath}/core/boards/lpcxpresso55s69
 )
 
 
-include(${SdkRootDirPath}/core/devices/LPC55S69/all_lib_device.cmake)
+include(${SdkRootDirPath}/devices/LPC55S69/all_lib_device.cmake)
 
 IF(NOT DEFINED TARGET_LINK_SYSTEM_LIBRARIES)  
     SET(TARGET_LINK_SYSTEM_LIBRARIES "-lm -lc -lgcc -lnosys")  
