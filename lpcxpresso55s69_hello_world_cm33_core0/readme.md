@@ -12,6 +12,8 @@ SDK version
 Toolchain supported
 ===================
 - GCC ARM Embedded  13.2.1
+- Keil MDK  5.39.0
+- IAR embedded Workbench  9.60.1
 - MCUXpresso  11.10.0
 
 Hardware requirements
